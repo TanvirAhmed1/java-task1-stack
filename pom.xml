@@ -4,4 +4,23 @@
   <artifactId>string-stack</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>string-stack</name>
+  <properties>
+  <mavin.compiler.target>11</mavin.compiler.target>
+  <mavin.compiler.source>11</mavin.compiler.source>
+  <junit.jupiter.version>5.4.0</junit.jupiter.version>
+  </properties>
+  <dependencies>
+  <dependency>
+  <groupId>org.junit.jupiter</groupId>
+  <artifactId>junit-jupiter-engine</artifactId>
+  <version>${junit.jupiter.version}</version>
+  <scope>test</scope>
+  </dependency>
+  <dependency>
+  <groupId>org.junit.jupiter</groupId>
+  <artifactId>junit-jupiter-api</artifactId>
+  <version>${junit.jupiter.version}</version>
+  <scope>test</scope>
+  </dependency>
+  </dependencies>
 </project>
