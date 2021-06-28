@@ -9,6 +9,9 @@ public class StringStackArray {
 		size = 0;
 	}
 	public void push(String value) {
+		if(size == stack.length) {
+			increasearraysize();
+		}
 		stack[size] = value;
 		size++;
 	}
@@ -24,13 +27,21 @@ public class StringStackArray {
 	}
 	public String peek()  {
 		if(size == 0) {
-			//throw new ArrayIndexOutOfBoundsException();
-			return "There is no space left";
+			return "Empty";
 		}
 		else {
 		String result = stack[size-1];
 		size--;
 		return result;
 		}
+	}
+	private void increasearraysize() {
+		int newSize = 2*stack.length;
+		
+		String []  newStack = new String[newSize];
+		for(int i = 0; i<stack.length; i++) {
+			newStack [i] = stack [i]; 
+		}
+		stack = newStack;
 	}
 }
